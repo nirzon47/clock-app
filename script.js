@@ -22,6 +22,11 @@ toggle.addEventListener('click', () => {
 
 // Functions
 
+/**
+ * Updates the clock display with the current time.
+ *
+ * @return {undefined} No return value.
+ */
 const updateClock = () => {
 	const date = new Date()
 	let h = date.getHours()
@@ -49,6 +54,12 @@ const updateClock = () => {
 	meridian.innerText = m
 }
 
+/**
+ * Returns a greeting based on the input hour.
+ *
+ * @param {number} h - The hour of the day.
+ * @return {string} The greeting based on the hour.
+ */
 const getGreeting = (h) => {
 	if (h >= 5 && h < 12) {
 		return 'Morning'
