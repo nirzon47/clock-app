@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.time {
+		@apply flex items-center justify-center w-24 p-4 font-mono text-5xl font-bold countdown join-item bg-zinc-400 bg-opacity-70 md:w-28;
+	}
+
+	.label {
+		@apply flex items-center justify-center w-24 h-12 font-sans font-medium text-white bg-indigo-500 join-item md:w-28 bg-opacity-70;
+	}
+
+	.meridian {
+		@apply flex items-center justify-center w-24 h-10 mx-auto text-lg font-medium text-center text-white duration-300 bg-orange-600 rounded-md shadow md:w-28 bg-opacity-70;
+	}
+}
