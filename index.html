@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Tailwind -->
+		<link rel="stylesheet" href="styles/output.css" />
+
+		<!-- Scripts -->
+		<script defer src="script.js"></script>
+	</head>
+	<body class="w-screen h-screen py-4 bg-no-repeat bg-cover">
+		<!-- Main content -->
+		<main class="grid place-content-center h-4/5">
+			<!-- Heading -->
+			<h1 class="mb-8 text-4xl font-bold text-center">
+				Good <span id="greeting"></span>
+			</h1>
+
+			<!-- Clock container -->
+			<div
+				class="grid grid-flow-col gap-1 mb-2 text-center md:gap-5 auto-cols-max"
+			>
+				<!-- Hours -->
+				<div
+					class="flex flex-col items-center justify-center shadow-md join join-vertical"
+				>
+					<span
+						class="flex items-center justify-center w-24 p-4 font-mono text-5xl font-bold countdown join-item bg-zinc-400 bg-opacity-70 md:w-28"
+					>
+						<span style="--value: 00" id="hours"></span>
+					</span>
+					<span
+						class="flex items-center justify-center w-24 h-12 font-sans font-medium text-white bg-indigo-500 join-item md:w-28 bg-opacity-70"
+						>HOURS</span
+					>
+				</div>
+
+				<!-- Minutes -->
+				<div
+					class="flex flex-col items-center justify-center shadow-md join join-vertical"
+				>
+					<span
+						class="flex items-center justify-center w-24 p-4 font-mono text-5xl font-bold countdown join-item bg-zinc-400 bg-opacity-70 md:w-28"
+					>
+						<span style="--value: 00" id="minutes"></span>
+					</span>
+					<span
+						class="flex items-center justify-center w-24 h-12 font-sans font-medium text-white bg-indigo-500 join-item md:w-28 bg-opacity-70"
+						>MINUTES</span
+					>
+				</div>
+
+				<!-- Seconds -->
+				<div
+					class="flex flex-col items-center justify-center shadow-md join join-vertical"
+				>
+					<span
+						class="flex items-center justify-center w-24 p-4 font-mono text-5xl font-bold countdown join-item bg-zinc-400 bg-opacity-70 md:w-28"
+					>
+						<span style="--value: 00" id="seconds"></span>
+					</span>
+					<span
+						class="flex items-center justify-center w-24 h-12 font-sans font-medium text-white bg-indigo-500 join-item md:w-28 bg-opacity-70"
+						><span>SECONDS</span></span
+					>
+				</div>
+			</div>
+
+			<!-- AM/PM indicator -->
+			<span
+				class="flex items-center justify-center w-24 h-10 mx-auto text-lg font-medium text-center text-white duration-300 bg-orange-600 rounded-md shadow md:w-28 bg-opacity-70"
+				><span id="meridian"></span
+			></span>
+		</main>
+
+		<!-- Toggle 24H -->
+		<label class="grid items-end justify-center swap swap-flip h-1/5">
+			<input type="checkbox" id="toggle" />
+			<div class="font-mono text-2xl font-bold swap-on btn btn-neutral">
+				24H MODE
+			</div>
+			<div class="font-mono text-2xl font-bold swap-off btn btn-neutral">
+				12H MODE
+			</div>
+		</label>
+	</body>
+</html>
